@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+</html>
+<head>
+    <title>SIGEM</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/fontello/css/animation.css" rel="stylesheet" />
+    <link href="assets/fontello/css/fontello.css" rel="stylesheet" />
+    <link href="assets/jquery-confirm/jquery-confirm-master/dist/jquery-confirm.min.css" rel="stylesheet" />
+    <link href="assets/jquery-loading/jquery-loading-master/dist/jquery.loading.min.css" rel="stylesheet" />
+    <link href="assets/signia/SigniaStyle.css" rel="stylesheet" />
+    <style>
+        body{
+            background: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <!--Modal Loading-->
+    <div id="modalLoader" class="height-100 modalLoader" style="display: none">
+        <div id="loader" align="center" style="margin-top: 13px; margin-bottom: 13px; ">
+            <i class="icone-spinner2 animate-spin" id="spin-loader"></i>
+            <br />
+            <span id="text-loader">Aguarde, Estamos Processando...</span>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Barra Lateral -->
+            <aside class="col-lg-3" style="border-right:2px solid #ffffff; height:100vh; background:#ffffff">
+                <div class="container-fluid">
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-lg-12 text-center">
+                            <img id="imgLogoEmp" width="80%" src="assets/imgs/logo.png" style="border-radius: 10px" />
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-lg-12 text-center text-success">
+                           <h4>Seja Bem Vindo, <i><label id="lblUsuario">Usuario</label></i></h4> 
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+
+            <!-- Frame -->
+            <section class="col-lg-9">
+
+            </section>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-confirm/jquery-confirm-master/dist/jquery-confirm.min.js"></script>
+    <script src="assets/signia/Mensagem.js"></script>
+    <script src="assets/signia/Loader.js"></script>
+    <script>
+        $(document).ready(function () {
+            verificaAutenticacao();
+        });
+
+
+        function verificaAutenticacao() {
+            var usuario = localStorage.getItem('user');
+            if (usuario == null || usuario == "") {
+                msgAtencao('Sua sessão expirou. Conecte novamente!');
+                setInterval(chamaIndex(), 5000);
+                
+            }
+            else {
+                console.log(usuario);
+                $('#_lblUsuario').text(usuario);
+            }
+        }
+
+        function chamaIndex() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

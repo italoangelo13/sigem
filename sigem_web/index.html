@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br"></html>
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+</html>
 <head>
-    <title>SIGNIA ERP</title>
+    <title>SIGEM</title>
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/fontello/css/animation.css" rel="stylesheet" />
     <link href="assets/fontello/css/fontello.css" rel="stylesheet" />
     <link href="assets/jquery-confirm/jquery-confirm-master/dist/jquery-confirm.min.css" rel="stylesheet" />
+    <link href="assets/jquery-loading/jquery-loading-master/dist/jquery.loading.min.css" rel="stylesheet" />
+    <link href="assets/signia/SigniaStyle.css" rel="stylesheet" />
     <style>
         html, body {
             height: 100%;
@@ -38,94 +41,124 @@
     </style>
 </head>
 <body style="background: url('assets/imgs/background-azul.jpg') top right">
-    
-        <div class="wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h3 class="text-center alert-primary">Acesso ao Sistema</h3>
-                    </div>
+    <!--Modal Loading-->
+    <div id="modalLoader" class="height-100 modalLoader" style="display: none">
+        <div id="loader" align="center" style="margin-top: 13px; margin-bottom: 13px; ">
+            <i class="icone-spinner2 animate-spin" id="spin-loader"></i>
+            <br />
+            <span id="text-loader">Aguarde, Estamos Processando...</span>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-center alert-primary">Acesso ao Sistema</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="display-1 text-success">SIGEM</h1>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-1 text-success">SIGEM</h1>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <label><i class="icone-user"></i>Usuario</label>
-                        <input type="text" ID="_edUsuario" class="form-control form-control-lg text-uppercase" />
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <label><i class="icone-user"></i>Usuario</label>
+                    <input type="text" id="_edUsuario" class="form-control form-control-lg text-uppercase" />
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <label><i class="icone-lock"></i>Senha</label>
-                        <input type="password" class="form-control form-control-lg"></asp:TextBox>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <label><i class="icone-lock"></i>Senha</label>
+                    <input type="password" id="_edSenha" class="form-control form-control-lg" />
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="btn btn-primary btn-block" onclick="autenticarUsuario()" ><i class="icone-monitor"></i> Acessar</div>
-                        
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="btn btn-primary btn-block" onclick="autenticarUsuario()"><i class="icone-monitor"></i> Acessar</div>
+
                 </div>
-                <div class="row alert-info">
-                    <div class="col-lg-12 text-center">
-                        <label class="text-muted">Versão 01.00.00</label>
-                    </div>
+            </div>
+            <div class="row alert-info">
+                <div class="col-lg-12 text-center">
+                    <label class="text-muted">Versão 01.00.00</label>
                 </div>
             </div>
         </div>
- 
+    </div>
+
     <script src="assets/bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/jquery-confirm/jquery-confirm-master/dist/jquery-confirm.min.js"></script>
-
-
+    <script src="assets/signia/Mensagem.js"></script>
+    <script src="assets/jquery-loading/jquery-loading-master/dist/jquery.loading.min.js"></script>
+    <script src="assets/signia/Loader.js"></script>
     <script>
-       
-
-
-
         function autenticarUsuario() {
-            debugger;
-            
+            showLoad('Autenticando Usuario...');
+            //debugger;
+            //msg("Teste de Autenticação!");
             var user = $('#_edUsuario').val();
             var pass = $('#_edSenha').val();
+            if (user == "" || user == null) {
+                msgAtencao("Campo Usuario é obrigatorio");
+                return;
+            }
+
+            if (pass == "" || pass == null) {
+                msgAtencao("Campo Senha é obrigatorio");
+                return;
+            }
+
             var obj = {
-                usuario : user,
-                senha : pass
+                usuario: user,
+                senha: pass
             };
-            console.log(JSON.stringify(obj));
+
+
+            //console.log(JSON.stringify(obj));
+
             $.ajax({
                 type: "POST",
-                url: "index.aspx/Autenticar",
+                url: "service.asmx/Autenticar",
                 data: JSON.stringify(obj),
-                contentType: "application/json: charset=utf-8",
+                contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                async: true,
-                success: function (data) {
-                    console.log(data.d);
+                success: function (data, status) {
+                    
                     var dados = data.d;
-                    alert(dados);
+                    //console.info(dados);
+
+                    var dadosJson = JSON.parse(dados);
+                    //console.info(dadosJson.Mensagem);
+                    if(dadosJson.Autenticado == true){
+                        localStorage.setItem('user', dadosJson.Usuario);
+                        localStorage.setItem('id', dadosJson.Id);
+                        hideLoad();
+                        msgSucesso(dadosJson.Mensagem);
+                        window.location.href = "dashboard.html";
+                    }
+                    else {
+                        hideLoad();
+                        msgErro(dadosJson.Mensagem);
+                    }
+                    
+
+
                 },
-                failure: function (response) {
-                    alert(response.d);
-                },
-                error: function (response) {
-                    alert(response.d);
-                },
+                error: function (xhr, msg, e) {
+                    msg(msg);
+                }
             });
         }
 
 
-        function msg(mensagem) {
-            $.alert({
-               title: 'SIGEM Alerta!',
-                content: mensagem,
-            });
-        }
-        
+
+
+
+
+
+
     </script>
 </body>
 </html>

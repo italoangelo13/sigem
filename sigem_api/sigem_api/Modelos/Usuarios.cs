@@ -8,18 +8,53 @@ namespace sigem_api.Modelos
     public class Usuarios
     {
         private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         private string usuario;
+
+        public string Usuario
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
         private string senha;
+
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
+        }
         private DateTime dataCadastro;
+
+        public DateTime DataCadastro
+        {
+            get { return dataCadastro; }
+            set { dataCadastro = value; }
+        }
         private string user;
+
+        public string User
+        {
+            get { return user; }
+            set { user = value; }
+        }
         private bool autenticado;
+
+        public bool Autenticado
+        {
+            get { return autenticado; }
+            set { autenticado = value; }
+        }
         private string mensagem;
-        public int Id { get => id; set => id = value; }
-        public string Usuario { get => usuario; set => usuario = value; }
-        public string Senha { get => senha; set => senha = value; }
-        public DateTime DataCadastro { get => dataCadastro; set => dataCadastro = value; }
-        public string User { get => user; set => user = value; }
-        public bool Autenticado { get => autenticado; set => autenticado = value; }
-        public string Mensagem { get => mensagem; set => mensagem = value; }
+
+        public string Mensagem
+        {
+            get { return mensagem; }
+            set { mensagem = value; }
+        }
     }
 }
