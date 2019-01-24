@@ -1,4 +1,4 @@
-﻿function showLoad(msg) {
+﻿function showLoad() {
     $('#modalLoader').css('display', 'flex');
     //$('body').loading({
     //    overlay: $('#modalLoader')

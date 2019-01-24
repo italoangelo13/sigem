@@ -11,7 +11,7 @@
     <link href="assets/signia/SigniaStyle.css" rel="stylesheet" />
     <style>
         body{
-            background: #0094ff;
+           
         }
     </style>
 </head>
@@ -28,17 +28,55 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Barra Lateral -->
-            <aside class="col-lg-3" style="border-right:2px solid #ffffff; height:100vh; background:#ffffff">
+            <aside class="col-lg-3 bg-primary" style="border-right: 2px solid #082bd5; height: 100vh;">
                 <div class="container-fluid">
                     <div class="row" style="margin-top:10px;">
                         <div class="col-lg-12 text-center">
-                            <img id="imgLogoEmp" width="80%" src="assets/imgs/logo.png" style="border-radius: 10px" />
+                            <img id="imgLogoEmp" width="80%" class="thumbnail" src="assets/imgs/logo.png" style="border-radius: 10px" />
                         </div>
                     </div>
 
                     <div class="row" style="margin-top:10px;">
-                        <div class="col-lg-12 text-center text-success">
+                        <div class="col-lg-12 text-center text-white">
                            <h4>Seja Bem Vindo, <i><label id="lblUsuario">Usuario</label></i></h4> 
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:10px;">
+                        <div class="col-lg-12 text-center ">
+                            <a id="_lkLogout" class="text-white" href="" style="font-size:14pt"><i class="icone-logout"></i> Sair</a>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="row" style="margin-top:30px;">
+                        <div class="col-lg-12">
+                            <h3 class=" alert alert-success text-center text-uppercase">Menu</h3>
+                           <div class="container-fluid">
+                               <div class="row btn-light text-success" style="margin-top:5px; cursor:pointer">
+                                   <div class="col-lg-12" style="padding:10px">
+                                       <h5><i class="icone-chart"></i> Dashboard</h5>
+                                   </div>
+                               </div>
+                               <div class="row btn-light text-success" style="margin-top:5px" onclick="chamaSubMenu('Adm')">
+                                   <div class="col-lg-12" style="padding:10px">
+                                       <h5><i class="icone-chart"></i> Administrativo</h5>
+                                   </div>
+                               </div>
+                               <div class="row btn-light text-success" style="margin-top:5px">
+                                   <div class="col-lg-12" style="padding:10px">
+                                       <h5><i class="icone-chart"></i> Financeiro</h5>
+                                   </div>
+                               </div>
+                               <div class="row btn-light text-success" style="margin-top:5px">
+                                   <div class="col-lg-12" style="padding:10px">
+                                       <h5><i class="icone-chart"></i> Comercial</h5>
+                                   </div>
+                               </div>
+                           </div>
                         </div>
                     </div>
                 </div>
@@ -59,25 +97,42 @@
     <script src="assets/signia/Loader.js"></script>
     <script>
         $(document).ready(function () {
+            
             verificaAutenticacao();
+
+            $('#_lkLogout').click(function () {
+                showLoad();
+                localStorage.removeItem('user');
+                localStorage.removeItem('id');
+                chamaIndex();
+            });
         });
 
 
         function verificaAutenticacao() {
+            console.log('Verificando Autenticação de Usuario');
             var usuario = localStorage.getItem('user');
             if (usuario == null || usuario == "") {
                 msgAtencao('Sua sessão expirou. Conecte novamente!');
-                setInterval(chamaIndex(), 5000);
+                chamaIndex();
                 
             }
             else {
                 console.log(usuario);
-                $('#_lblUsuario').text(usuario);
+                //document.getElementById("_lblUsuario").innerHTML = usuario;
+                $('#lblUsuario').text(usuario);
             }
         }
 
         function chamaIndex() {
             window.location.href = "index.html";
+        }
+
+
+        function chamaSubMenu(tela) {
+            if (tela == 'Adm') {
+                window.open('caminho.html', '_blank');
+            }
         }
     </script>
 </body>
