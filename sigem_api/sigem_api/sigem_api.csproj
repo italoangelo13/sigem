@@ -90,6 +90,7 @@
     <Content Include="assets\signia\Loader.js" />
     <Content Include="assets\signia\Mensagem.js" />
     <Content Include="assets\signia\SigniaStyle.css" />
+    <Content Include="conteudo.html" />
     <Content Include="Dashboard.html" />
     <Content Include="packages.config" />
     <Content Include="assets\bootstrap\css\.DS_Store" />
@@ -543,6 +544,7 @@
     <Content Include="assets\pickadate.js\pickadate.js-3.5.6\version-commit.js" />
     <Content Include="index.html" />
     <Content Include="service.asmx" />
+    <Content Include="Telas\Painel_Adm.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -557,9 +559,7 @@
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Telas\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
