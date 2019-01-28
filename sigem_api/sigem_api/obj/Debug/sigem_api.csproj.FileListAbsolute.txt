@@ -38,3 +38,42 @@ C:\Projetos_Italo\sigem\sigem_api\sigem_api\bin\Newtonsoft.Json.dll
 C:\Projetos_Italo\sigem\sigem_api\sigem_api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Projetos_Italo\sigem\sigem_api\sigem_api\obj\Debug\sigem_api.dll
 C:\Projetos_Italo\sigem\sigem_api\sigem_api\obj\Debug\sigem_api.pdb
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\csc.exe
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\csc.exe.config
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\csc.rsp
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\csi.exe
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\csi.rsp
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.AppContext.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\vbc.exe
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\vbc.exe.config
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\vbc.rsp
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\VBCSCompiler.exe
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\sigem_api.dll.config
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\sigem_api.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\sigem_api.pdb
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\AjaxControlToolkit.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\AjaxControlToolkit.HtmlEditor.Sanitizer.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\BarcodeLib.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\MySql.Data.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\Newtonsoft.Json.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\obj\Debug\sigem_api.csprojResolveAssemblyReference.cache
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\obj\Debug\sigem_api.dll
+C:\Users\Italo e Ana\Desktop\Projetos\sigem\sigem_api\sigem_api\obj\Debug\sigem_api.pdb

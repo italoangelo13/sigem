@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>sigem_api</RootNamespace>
     <AssemblyName>sigem_api</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,24 +70,95 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Pacotes\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\css\bootstrap.css" />
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\css\bootstrap.min.css" />
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\js\bootstrap.js" />
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\js\bootstrap.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.bootstrap.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.bootstrap.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.bootstrap4.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.bootstrap4.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.dataTables.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.dataTables.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.foundation.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.foundation.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.jqueryui.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.jqueryui.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.semanticui.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\buttons.semanticui.min.css" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.bootstrap.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.bootstrap.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.bootstrap4.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.bootstrap4.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.colVis.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.colVis.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.flash.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.flash.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.foundation.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.foundation.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.html5.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.html5.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.jqueryui.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.jqueryui.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.print.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.print.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.semanticui.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\buttons.semanticui.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\dataTables.buttons.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\js\dataTables.buttons.min.js" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\swf\flashExport.swf" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.bootstrap.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.bootstrap.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.bootstrap4.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.bootstrap4.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.foundation.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.foundation.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.jqueryui.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.jqueryui.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.semanticui.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\dataTables.semanticui.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\jquery.dataTables.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\css\jquery.dataTables.min.css" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\images\sort_asc.png" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\images\sort_asc_disabled.png" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\images\sort_both.png" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\images\sort_desc.png" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\images\sort_desc_disabled.png" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.bootstrap.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.bootstrap.min.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.bootstrap4.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.bootstrap4.min.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.foundation.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.foundation.min.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.jqueryui.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.jqueryui.min.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.semanticui.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\dataTables.semanticui.min.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\jquery.dataTables.js" />
+    <Content Include="assets\DataTables\DataTables-1.10.18\js\jquery.dataTables.min.js" />
+    <Content Include="assets\DataTables\datatables.css" />
+    <Content Include="assets\DataTables\datatables.js" />
+    <Content Include="assets\DataTables\datatables.min.css" />
+    <Content Include="assets\DataTables\datatables.min.js" />
+    <Content Include="assets\DataTables\jQuery-3.3.1\jquery-3.3.1.js" />
+    <Content Include="assets\DataTables\jQuery-3.3.1\jquery-3.3.1.min.js" />
     <Content Include="assets\signia\Loader.js" />
     <Content Include="assets\signia\Mensagem.js" />
     <Content Include="assets\signia\SigniaStyle.css" />
@@ -180,6 +252,10 @@
     <Content Include="assets\pickadate.js\pickadate.js-3.5.6\LICENSE.md" />
     <Content Include="assets\pickadate.js\pickadate.js-3.5.6\package.json" />
     <Content Include="assets\pickadate.js\pickadate.js-3.5.6\README.md" />
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\css\bootstrap.css.map" />
+    <Content Include="assets\DataTables\Bootstrap-4-4.1.1\css\bootstrap.min.css.map" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\common.scss" />
+    <Content Include="assets\DataTables\Buttons-1.5.4\css\mixins.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -544,6 +620,8 @@
     <Content Include="assets\pickadate.js\pickadate.js-3.5.6\version-commit.js" />
     <Content Include="index.html" />
     <Content Include="service.asmx" />
+    <Content Include="Telas\CadProdutos.html" />
+    <Content Include="Telas\Painel_Almoxarifado.html" />
     <Content Include="Telas\Painel_Adm.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
